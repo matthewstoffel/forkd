@@ -1,0 +1,28 @@
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    navigatingTo="onNavigatingTo"
+    class="page">
+    <ActionBar title="Forkd - Restaurant Spinner" class="action-bar" />
+    
+    <GridLayout rows="auto, *, auto" class="p-4">
+        <StackLayout row="0" class="mb-4">
+            <Label text="Let's find where to eat!" class="text-2xl font-bold text-center" />
+            <Label text="{{ spinnerMessage }}" class="text-lg text-center text-gray-500" textWrap="true" />
+        </StackLayout>
+
+        <GridLayout row="1" class="spinner-container">
+            <StackLayout class="tumbler-container">
+                <Label text="↓" class="text-3xl text-center text-indigo-600 font-bold" />
+                <GridLayout id="tumblerWindow" height="60" class="tumbler-window">
+                    <Label id="restaurantLabel" text="{{ currentRestaurant }}" class="tumbler-text" />
+                </GridLayout>
+                <Button text="SPIN" tap="{{ onSpinTap }}" class="-primary mt-4" />
+            </StackLayout>
+        </GridLayout>
+
+        <StackLayout row="2" class="mt-4">
+            <Button text="Individual Mode" tap="{{ onIndividualMode }}" class="-primary mb-2" />
+            <Button text="Group Mode" tap="{{ onGroupMode }}" class="-outline" />
+        </StackLayout>
+    </GridLayout>
+</Page>

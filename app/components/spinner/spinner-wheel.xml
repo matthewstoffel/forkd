@@ -1,0 +1,12 @@
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" width="300" height="300">
+    <Image src="~/assets/wheel-arrow.png" width="30" height="50" verticalAlignment="top" horizontalAlignment="center" />
+    <GridLayout id="wheelContainer" width="280" height="280" class="spinner-wheel" tap="{{ onSpinTap }}">
+        <Repeater items="{{ spinnerSections }}">
+            <Repeater.itemTemplate>
+                <StackLayout rotate="{{ startAngle }}" width="280" height="140" class="spinner-section">
+                    <Label text="{{ restaurant.name }}" class="text-center text-white p-2" textWrap="true" />
+                </StackLayout>
+            </Repeater.itemTemplate>
+        </Repeater>
+    </GridLayout>
+</GridLayout>

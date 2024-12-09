@@ -1,0 +1,7 @@
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" class="tumbler-container">
+    <Label text="↓" class="text-3xl text-center text-indigo-600 font-bold" />
+    <GridLayout height="60" class="tumbler-window">
+        <Label id="tumblerText" text="{{ currentRestaurant }}" class="tumbler-text" />
+    </GridLayout>
+    <Button text="SPIN" tap="{{ onSpinTap }}" class="-primary mt-4" />
+</GridLayout>
